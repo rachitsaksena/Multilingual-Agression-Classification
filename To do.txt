@@ -1,0 +1,4 @@
+1 - identify and seperate english words using LexNorm
+2 - correct spelling mistakes if any using LexNorm
+3 - identify language and translate words to english using googletrans library
+4 - pre embedding EDA

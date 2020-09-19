@@ -1,4 +1,4 @@
-# Low-Resourced Hate Speech Recognition in Code-Mixed Indian Vernacular
+# Low-Resourced Code-Mixed Aggression Classification
 
 Table of Contents
 =================

@@ -1,4 +1,4 @@
-1 - identify and seperate english words using LexNorm
-2 - correct spelling mistakes if any using LexNorm
-3 - identify language and translate words to english using googletrans library
+1 - tokenize the words
+2 - language tag all the words
+3 - convert the non english words to english
 4 - pre embedding EDA

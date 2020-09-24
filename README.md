@@ -1,7 +1,6 @@
 # Low-Resourced Code-Mixed Aggression Classification
 
-Table of Contents
-=================
+## Table of Contents
   * [Notebook](#TRAC-2.ipynb)
   * [Data](#Data)
   * [License](#license)

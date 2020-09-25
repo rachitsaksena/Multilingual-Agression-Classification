@@ -1,4 +1,4 @@
-1 - tokenize the words
-2 - language tag all the words
-3 - convert the non english words to english
-4 - pre embedding EDA
+ENGLISH-TRAIN:
+1 - Bias regularization
+2 - Class dependence based cleaning
+3 - Pre-Embedding EDA

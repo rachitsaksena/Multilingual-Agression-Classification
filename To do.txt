@@ -2,3 +2,5 @@ ENGLISH-TRAIN:
 1 - Bias regularization
 2 - Class dependence based cleaning
 3 - Pre-Embedding EDA
+4 - Pre Trained Skipgram embeddings
+5 - CoreNLP multilingual POS Tags and Transliteration bug fix

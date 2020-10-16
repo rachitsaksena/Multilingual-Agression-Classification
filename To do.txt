@@ -1,5 +1,4 @@
 ENGLISH-TRAIN:
-
 1 - Bias Regularization:
 > Baseline
 > Effect of upsampling
@@ -32,6 +31,7 @@ ENGLISH-TRAIN:
 
 
 Left overs:
+> CoreNLP multilingual POS Tags
 > Lang generalized algos
 > Implement Adversarial Validation before EDA and use implemented Algos to generate Features.
 > Model Training and Classification (ENSEMBLE)
@@ -43,3 +43,4 @@ Ideas?
 2. SentenceBERT
 3. InferSent
 4. Universal Sentence Encoder
+

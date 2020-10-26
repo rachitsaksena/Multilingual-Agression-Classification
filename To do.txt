@@ -44,3 +44,5 @@ Ideas?
 3. InferSent
 4. Universal Sentence Encoder
 
+> Download wiki-news-300d-1M.vec.zip // TOO BIG FOR GIT
+(https://fasttext.cc/docs/en/english-vectors.html)

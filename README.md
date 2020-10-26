@@ -25,12 +25,12 @@ python -m venv .env
 source .env/bin/activate
 ```
 
-Extract [requirements](#requirements.txt)
+Install [dependencies](#requirements.txt) directly by
 ```shell
 cd Multilingual-Agression-Classification
 pip3 install -r requirements.txt
 ``` 
-***Disclaimer:*** _This may take a while._
+**Disclaimer:** _This may take a while._
 
 **Downloadables:**
 
@@ -57,6 +57,9 @@ The dataset was observed to be considerably small with a heavy amount of code-mi
 
 ### Feature Generation
 Besides using Bag-of-Words (BOW) and Term Frequency–Inverse Document Frequency (TF-IDF) based methods, we tried to capture the semantic footprint of the data in hand using Statistical Topic Modelling and Skip-Gram models. We used Gensim and Mallet's implementation of the Latent Dirichlet Allocation Algorithm to generate Topics and created custom document vectors, which included the sentence length and word count alongside the generated topics. For Skip-gram models, we opted for Google Research's Word2Vec ([Mikolov et al. 2013](https://arxiv.org/pdf/1301.3781.pdf)), Stanford NLP's Global Vectors for Word Representation (GloVe: [Pennington et al. 2014](https://nlp.stanford.edu/pubs/glove.pdf)), and Facebook AI Research's FastText ([Bojanowski et al. 2017](https://arxiv.org/pdf/1607.04606.pdf)) in order to capture sub-word level information. The word vector generation is explained in detail in our [Feature Generation and Engineering Notebook](#EDA,-Data-Visualization,-and-Feature-Engineering.ipynb).
+
+### Adversarial Validation
+Given the 'NAG' bias, models, howsoever simple they may be in generalizing, are bound to overfit. In order to prevent that, we use a Kaggle Favourite "Adversarial Validation" in order to make the test and training sets undifferentiable.
 
 ### Data Modelling
 The results of different Machine Learning models on the test set:
@@ -85,4 +88,51 @@ The following table elaborates the implementation details of each model:
 
 **... was chosen finally because of ...**
 
-## Future Work
+## TO-DO List
+
+#### Tasks
+- [ ] Generating Word Embeddings for all sets
+- [ ] Lang generalized algos
+- [ ] Clean Repo, Add Images
+
+#### Bias Regularization
+- [ ] Baseline
+- [ ] Effect of upsampling
+- [ ] Effect of downsampling
+- [ ] Weighted classification
+- [X] Adversarial Validation
+
+#### Corpus Cleaning and Pre-Embedding EDA
+- [ ] Remove corpus specific stop words
+- [ ] Class based Interdependence
+- [ ] Lemmatization
+- [ ] Handling NaN values
+
+#### Fine Tuning
+- [ ] t-SNE perplexity vals
+- [ ] BOW, TFIDF (min, max df)
+- [ ] LDA vecs (after pre embedding cleaning) - test baseline as well
+- [ ] Word2Vec(with/without shuffle, avg vs tfidf) (pre trained and custom)
+- [ ] GloVe (window, epochs, etc) (pre trained and custom)
+- [ ] FastText (pre trained and custom)
+- [ ] Meta Feature Engineering
+- [ ] Feature addition to BI-LSTM-CRF models
+- [ ] Active Learning based sampling strategies
+
+#### Bugs
+- [ ] Bad hyperlink cleaning (httpsyoutbe)
+- [ ] Punctuations (!, etc)
+- [ ] Numbers
+- [X] Bad transliteration dict (Use Sets)
+- [X] Bad language tagging and translation (some Bangla got through)
+- [ ] Bad spelling corrections {couture (is already a word) instead of culture}
+- [ ] Handling NaN values created due to Bad Lexical Normalization
+- [ ] Fix DeEmojify (Hug emoji, Peace sign, etc)
+
+#### Ideas / Future Work
+ * Using other sentence embeddings for BERT
+    1. Doc2Vec
+    2. SentenceBERT
+    3. InferSent
+    4. Universal Sentence Encoder
+ * Increase Test and Training size with TRAC-1 Data

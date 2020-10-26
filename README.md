@@ -5,10 +5,10 @@ Hate Speech Recognition in Code-Mixed Social Media Texts belonging to Low-Resour
 In recent years, there has been a gradual shift from largely static, read-only web to quickly expanding user-generated content on the web due to which the number of user interactions across the globe has sky-rocketed, with a noticeable rise in the incidents of aggression and related activities like trolling, cyberbullying, flaming, hate speech, etc. The increased reach and accessibility of the Internet (especially during the Global Pandemic where the usual workflow has been shifted towards online platforms) such incidents have gained unprecedented power and influence the lives of billions of people posing a formidable challenge given the low resource environment the multilingual setting imposes. Therefore, we aim to tackle the task of domain-specific hate speech recognition in mixed multilingual social media texts (youtube comments).
 
 ## Table of Contents
-  * [The Dataset](#Data-Acquisition)
-  * [Prerequisites and Dependencies](#Prerequisites-and-Dependencies)
-  * [Methodology](#Methodology)
-  * [License](#license)
+  1. [The Dataset](#Data-Acquisition)
+  2. [Prerequisites and Dependencies](#Prerequisites-and-Dependencies)
+  3. [Methodology](#Methodology)
+  4. [License](#license)
 
 ## Data Acquisition
 The following [dataset](#Data) was acquired from the Shared Task of TRAC-2020, the second workshop on Trolling, Aggression, and Cyberbullying co-located with and organized under the 12th edition of Language Resources and Evaluation Conference (LREC - 2020) at Marseille, France. The [TRAC-2](https://sites.google.com/view/trac2/shared-task) Dataset is publicly available under Creative Commons Noncommercial Share-Alike 4.0 license CC-BY-NC-SA 4.0.
@@ -116,8 +116,6 @@ The following table elaborates the implementation details of each model:
 - [ ] GloVe (window, epochs, etc) (pre trained and custom)
 - [ ] FastText (pre trained and custom)
 - [ ] Meta Feature Engineering
-- [ ] Feature addition to BI-LSTM-CRF models
-- [ ] Active Learning based sampling strategies
 
 #### Bugs
 - [ ] Bad hyperlink cleaning (httpsyoutbe)

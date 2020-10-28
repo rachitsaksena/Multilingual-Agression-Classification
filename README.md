@@ -26,7 +26,7 @@ python -m venv .env
 source .env/bin/activate
 ```
 
-Install [dependencies](#requirements.txt) directly by
+Install [dependencies](https://github.com/rachitsaksena/Multilingual-Agression-Classification/tree/master/requirements.txt) directly by
 ```shell
 cd Multilingual-Agression-Classification/
 pip3 install -r requirements.txt

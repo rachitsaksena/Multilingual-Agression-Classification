@@ -1,2 +1,4 @@
 .vscode
 push.sh
+.DS_Store
+.ipynb_checkpoints

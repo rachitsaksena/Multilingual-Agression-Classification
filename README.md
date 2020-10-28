@@ -26,9 +26,9 @@ python -m venv .env
 source .env/bin/activate
 ```
 
-Install [dependencies](#requirements.txt) directly by
+Install [dependencies](https://github.com/rachitsaksena/Multilingual-Agression-Classification/tree/master/requirements.txt) directly by
 ```shell
-cd Multilingual-Agression-Classification
+cd Multilingual-Agression-Classification/
 pip3 install -r requirements.txt
 ``` 
 **Disclaimer:** _This may take a while._
@@ -63,37 +63,41 @@ Besides using Bag-of-Words (BOW) and Term Frequency–Inverse Document Frequency
 Given the 'NAG' bias, models, howsoever simple they may be in generalizing, are bound to overfit. In order to prevent that, we use a Kaggle Favourite "Adversarial Validation" in order to make the test and training sets undifferentiable.
 
 ### Data Modelling
-The results of different Machine Learning models on the test set:
-
+We chose simple models like Logistic Regression, MultinomialNB, and SVC that wouldn't get overwhelmed by the imbalance and generalize easily. We also fine-tuned a BERT instance due to it's recorded State-of-the-Art performance with multilingual text classification tasks. The results of different Machine Learning models on the test set:
 |           Model           | English | Hindi | Bangla |
 |:-------------------------:|:-------:|:-----:|:------:|
 |    Logistic Regression    |         |       |        |
 |  Multinomial Naive Bayes  |         |       |        |
 | Support Vector Classifier |         |       |        |
-
-Similarly, for the Deep Learning models:
-
-|    Model   | English | Hindi | Bangla |
-|:----------:|:-------:|:-----:|:------:|
-|    LSTM    |         |       |        |
-| DistilBERT |         |       |        |
-|   RoBERTa  |         |       |        |
-|   ALBERT   |         |       |        |
+|             BERT          |         |       |        |
 
 The following table elaborates the implementation details of each model:
 |          Model          |                                               Dependencies                                              |
 |:-----------------------:|:-------------------------------------------------------------------------------------------------------:|
 | LR, MultinomialNB, SVC  | Self (SciKit Learn for comparison and post-processing utils), NLTK, iNLTK, IndicNLP, CoreNLP and Gensim |
-|           LSTM          |                         PyTorch, TorchText, FastText Pre-Trained Word Embeddings                        |
-| Tranformer Based Models |                 PyTorch, HuggingFace Transformers (Pre-Trained Weights for fine-tuning)                 |
+| Tranformer Based Models |                                     Tensorflow, Tensorflow's BERT Base                                  |
 
 **... was chosen finally because of ...**
+
+### Future Work
+ * Reliable lemmatization for Hindi and Bangla
+ * Using huggingface's BERT variants (DistilBERT, RoBERTa, ALBERT, etc.)
+ * [Sentence Transformers](https://github.com/UKPLab/sentence-transformers)
+ * Implement bagging and aggregating BERT models
+ * Using other sentence embeddings for BERT
+    1. Doc2Vec
+    2. SentenceBERT
+    3. InferSent
+    4. Universal Sentence Encoder
+    5. ELMo's Sentence Embeddings
+ * XLNet
+ * Increase Test and Training size with TRAC-1 Data
 
 ## TO-DO List
 
 #### Tasks
 - [ ] Generating Word Embeddings for all sets
-- [ ] Lang generalized algos
+- [X] Lang generalized algos
 - [ ] Clean Repo, Add Images
 
 #### Bias Regularization
@@ -127,11 +131,3 @@ The following table elaborates the implementation details of each model:
 - [ ] Bad spelling corrections {couture (is already a word) instead of culture}
 - [ ] Handling NaN values created due to Bad Lexical Normalization
 - [ ] Fix DeEmojify (Hug emoji, Peace sign, etc)
-
-#### Ideas / Future Work
- * Using other sentence embeddings for BERT
-    1. Doc2Vec
-    2. SentenceBERT
-    3. InferSent
-    4. Universal Sentence Encoder
- * Increase Test and Training size with TRAC-1 Data

@@ -28,7 +28,7 @@ source .env/bin/activate
 
 Install [dependencies](#requirements.txt) directly by
 ```shell
-cd Multilingual-Agression-Classification
+cd Multilingual-Agression-Classification/
 pip3 install -r requirements.txt
 ``` 
 **Disclaimer:** _This may take a while._
@@ -70,15 +70,10 @@ The results of different Machine Learning models on the test set:
 |    Logistic Regression    |         |       |        |
 |  Multinomial Naive Bayes  |         |       |        |
 | Support Vector Classifier |         |       |        |
+|             BERT          |         |       |        |
 
 Similarly, for the Deep Learning models:
 
-|    Model   | English | Hindi | Bangla |
-|:----------:|:-------:|:-----:|:------:|
-|    LSTM    |         |       |        |
-| DistilBERT |         |       |        |
-|   RoBERTa  |         |       |        |
-|   ALBERT   |         |       |        |
 
 The following table elaborates the implementation details of each model:
 |          Model          |                                               Dependencies                                              |
@@ -89,11 +84,23 @@ The following table elaborates the implementation details of each model:
 
 **... was chosen finally because of ...**
 
+### Future Work
+ * Reliable lemmatization for Hindi and Bangla
+ * Using huggingface's BERT variants (DistilBERT, RoBERTa, ALBERT, etc.)
+ * [Sentence Transformers](https://github.com/UKPLab/sentence-transformers)
+ * Using other sentence embeddings for BERT
+    1. Doc2Vec
+    2. SentenceBERT
+    3. InferSent
+    4. Universal Sentence Encoder
+    5. ELMo
+ * Increase Test and Training size with TRAC-1 Data
+
 ## TO-DO List
 
 #### Tasks
 - [ ] Generating Word Embeddings for all sets
-- [ ] Lang generalized algos
+- [X] Lang generalized algos
 - [ ] Clean Repo, Add Images
 
 #### Bias Regularization
@@ -127,11 +134,3 @@ The following table elaborates the implementation details of each model:
 - [ ] Bad spelling corrections {couture (is already a word) instead of culture}
 - [ ] Handling NaN values created due to Bad Lexical Normalization
 - [ ] Fix DeEmojify (Hug emoji, Peace sign, etc)
-
-#### Ideas / Future Work
- * Using other sentence embeddings for BERT
-    1. Doc2Vec
-    2. SentenceBERT
-    3. InferSent
-    4. Universal Sentence Encoder
- * Increase Test and Training size with TRAC-1 Data

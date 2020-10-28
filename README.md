@@ -90,7 +90,6 @@ The following table elaborates the implementation details of each model:
     3. InferSent
     4. Universal Sentence Encoder
     5. ELMo's Sentence Embeddings
- *
  * Increase Test and Training size with TRAC-1 Data
 
 ## TO-DO List

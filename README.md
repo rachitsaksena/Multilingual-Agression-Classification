@@ -83,13 +83,14 @@ The following table elaborates the implementation details of each model:
  * Reliable lemmatization for Hindi and Bangla
  * Using huggingface's BERT variants (DistilBERT, RoBERTa, ALBERT, etc.)
  * [Sentence Transformers](https://github.com/UKPLab/sentence-transformers)
- * Implement bagging for BERT
+ * Implement bagging and aggregating BERT models
  * Using other sentence embeddings for BERT
     1. Doc2Vec
     2. SentenceBERT
     3. InferSent
     4. Universal Sentence Encoder
     5. ELMo's Sentence Embeddings
+ * XLNet
  * Increase Test and Training size with TRAC-1 Data
 
 ## TO-DO List

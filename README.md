@@ -63,8 +63,7 @@ Besides using Bag-of-Words (BOW) and Term Frequency–Inverse Document Frequency
 Given the 'NAG' bias, models, howsoever simple they may be in generalizing, are bound to overfit. In order to prevent that, we use a Kaggle Favourite "Adversarial Validation" in order to make the test and training sets undifferentiable.
 
 ### Data Modelling
-The results of different Machine Learning models on the test set:
-
+We chose simple models like Logistic Regression, MultinomialNB, and SVC that wouldn't get overwhelmed by the imbalance and generalize easily. We also fine-tuned a BERT instance due to it's recorded State-of-the-Art performance with multilingual text classification tasks. The results of different Machine Learning models on the test set:
 |           Model           | English | Hindi | Bangla |
 |:-------------------------:|:-------:|:-----:|:------:|
 |    Logistic Regression    |         |       |        |
@@ -72,15 +71,11 @@ The results of different Machine Learning models on the test set:
 | Support Vector Classifier |         |       |        |
 |             BERT          |         |       |        |
 
-Similarly, for the Deep Learning models:
-
-
 The following table elaborates the implementation details of each model:
 |          Model          |                                               Dependencies                                              |
 |:-----------------------:|:-------------------------------------------------------------------------------------------------------:|
 | LR, MultinomialNB, SVC  | Self (SciKit Learn for comparison and post-processing utils), NLTK, iNLTK, IndicNLP, CoreNLP and Gensim |
-|           LSTM          |                         PyTorch, TorchText, FastText Pre-Trained Word Embeddings                        |
-| Tranformer Based Models |                 PyTorch, HuggingFace Transformers (Pre-Trained Weights for fine-tuning)                 |
+| Tranformer Based Models |                                     Tensorflow, Tensorflow's BERT Base                                  |
 
 **... was chosen finally because of ...**
 
@@ -88,12 +83,14 @@ The following table elaborates the implementation details of each model:
  * Reliable lemmatization for Hindi and Bangla
  * Using huggingface's BERT variants (DistilBERT, RoBERTa, ALBERT, etc.)
  * [Sentence Transformers](https://github.com/UKPLab/sentence-transformers)
+ * Implement bagging for BERT
  * Using other sentence embeddings for BERT
     1. Doc2Vec
     2. SentenceBERT
     3. InferSent
     4. Universal Sentence Encoder
-    5. ELMo
+    5. ELMo's Sentence Embeddings
+ *
  * Increase Test and Training size with TRAC-1 Data
 
 ## TO-DO List

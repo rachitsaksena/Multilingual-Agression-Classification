@@ -96,38 +96,38 @@ The following table elaborates the implementation details of each model:
 ## TO-DO List
 
 #### Tasks
-- [ ] Generating Word Embeddings for all sets
+- [X] Generating Word Embeddings for all sets
 - [X] Lang generalized algos
 - [ ] Clean Repo, Add Images
 
 #### Bias Regularization
-- [ ] Baseline
-- [ ] Effect of upsampling
+- [X] Baseline
+- [X] Effect of upsampling
 - [ ] Effect of downsampling
-- [ ] Weighted classification
+- [X] Weighted classification
 - [X] Adversarial Validation
 
 #### Corpus Cleaning and Pre-Embedding EDA
-- [ ] Remove corpus specific stop words
-- [ ] Class based Interdependence
+- [X] Remove corpus specific stop words
+- [X] Class based Interdependence
 - [ ] Lemmatization
-- [ ] Handling NaN values
+- [X] Handling NaN values
 
 #### Fine Tuning
-- [ ] t-SNE perplexity vals
-- [ ] BOW, TFIDF (min, max df)
-- [ ] LDA vecs (after pre embedding cleaning) - test baseline as well
-- [ ] Word2Vec(with/without shuffle, avg vs tfidf) (pre trained and custom)
-- [ ] GloVe (window, epochs, etc) (pre trained and custom)
-- [ ] FastText (pre trained and custom)
+- [X] t-SNE perplexity vals
+- [X] BOW, TFIDF (min, max df)
+- [X] LDA vecs (after pre embedding cleaning) - test baseline as well
+- [X] Word2Vec(with/without shuffle, avg vs tfidf) (pre trained and custom)
+- [X] GloVe (window, epochs, etc) (pre trained and custom)
+- [X] FastText (pre trained and custom)
 - [ ] Meta Feature Engineering
 
 #### Bugs
-- [ ] Bad hyperlink cleaning (httpsyoutbe)
-- [ ] Punctuations (!, etc)
-- [ ] Numbers
+- [X] Bad hyperlink cleaning (httpsyoutbe)
+- [X] Punctuations (!, etc)
+- [X] Numbers
 - [X] Bad transliteration dict (Use Sets)
 - [X] Bad language tagging and translation (some Bangla got through)
-- [ ] Bad spelling corrections {couture (is already a word) instead of culture}
-- [ ] Handling NaN values created due to Bad Lexical Normalization
-- [ ] Fix DeEmojify (Hug emoji, Peace sign, etc)
+- [X] Bad spelling corrections {couture (is already a word) instead of culture}
+- [X] Handling NaN values created due to Bad Lexical Normalization
+- [X] Fix DeEmojify (Hug emoji, Peace sign, etc)

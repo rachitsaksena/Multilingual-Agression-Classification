@@ -63,7 +63,7 @@ Besides using Bag-of-Words (BOW) and Term Frequency–Inverse Document Frequency
 Given the 'NAG' bias, models, howsoever simple they may be in generalizing, are bound to overfit. In order to prevent that, we use a Kaggle Favourite "Adversarial Validation" in order to make the test and training sets undifferentiable.
 
 ### Data Modelling
-We chose simple models like Logistic Regression, MultinomialNB, and SVC that wouldn't get overwhelmed by the imbalance and generalize easily. We also fine-tuned a BERT instance due to it's recorded State-of-the-Art performance with multilingual text classification tasks. The results of different Machine Learning models on the test set:
+We chose simple models like Logistic Regression, MultinomialNB, and SVC that wouldn't get overwhelmed by the imbalance and generalize easily. We also fine-tuned a BERT instance due to it's recorded State-of-the-Art performance with multilingual text classification tasks. The results of [various Machine Learning models](https://github.com/rachitsaksena/Multilingual-Agression-Classification/tree/master/Data%20Models) on the test set:
 |           Model           | English | Hindi | Bangla |
 |:-------------------------:|:-------:|:-----:|:------:|
 |    Logistic Regression    |         |       |        |

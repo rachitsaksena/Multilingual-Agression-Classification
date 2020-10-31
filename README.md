@@ -60,10 +60,10 @@ The dataset was observed to be considerably small with a heavy amount of code-mi
 Besides using Bag-of-Words (BOW) and Term Frequency–Inverse Document Frequency (TF-IDF) based methods, we tried to capture the semantic footprint of the data in hand using Statistical Topic Modelling and Skip-Gram models. We used Gensim and Mallet's implementation of the Latent Dirichlet Allocation Algorithm to generate Topics and created custom document vectors, which included the sentence length and word count alongside the generated topics. For Skip-gram models, we opted for Google Research's Word2Vec ([Mikolov et al. 2013](https://arxiv.org/pdf/1301.3781.pdf)), Stanford NLP's Global Vectors for Word Representation (GloVe: [Pennington et al. 2014](https://nlp.stanford.edu/pubs/glove.pdf)), and Facebook AI Research's FastText ([Bojanowski et al. 2017](https://arxiv.org/pdf/1607.04606.pdf)) in order to capture sub-word level information. The word vector generation is explained in detail in our [Feature Generation and Engineering Notebook](https://github.com/rachitsaksena/Multilingual-Agression-Classification/blob/master/EDA%2C%20Data%20Visualization%2C%20and%20Feature%20Engineering.ipynb).
 
 ### Adversarial Validation
-Given the 'NAG' bias, models, howsoever simple they may be in generalizing, are bound to overfit. In order to prevent that, we use a Kaggle Favourite "Adversarial Validation" in order to make the test and training sets undifferentiable.
+Given the 'NAG' bias, models, howsoever simple they may be in generalizing, are bound to overfit. In order to prevent that, we use a Kaggle Favourite "[Adversarial Validation](https://github.com/rachitsaksena/Multilingual-Agression-Classification/blob/master/Adversarial%20Validation.ipynb)" in order to make the test and training sets undifferentiable.
 
 ### Data Modelling
-We chose simple models like Logistic Regression, MultinomialNB, and SVC that wouldn't get overwhelmed by the imbalance and generalize easily. We also fine-tuned a BERT instance due to it's recorded State-of-the-Art performance with multilingual text classification tasks. The results of different Machine Learning models on the test set:
+We chose simple models like Logistic Regression, MultinomialNB, and SVC that wouldn't get overwhelmed by the imbalance and generalize easily. We also fine-tuned a BERT instance due to it's recorded State-of-the-Art performance with multilingual text classification tasks. The results of [various Machine Learning models](https://github.com/rachitsaksena/Multilingual-Agression-Classification/tree/master/Data%20Models) on the test set:
 |           Model           | English | Hindi | Bangla |
 |:-------------------------:|:-------:|:-----:|:------:|
 |    Logistic Regression    |         |       |        |
@@ -96,38 +96,38 @@ The following table elaborates the implementation details of each model:
 ## TO-DO List
 
 #### Tasks
-- [ ] Generating Word Embeddings for all sets
-- [X] Lang generalized algos
+- [X] ~~Generating Word Embeddings for all sets~~
+- [X] ~~Lang generalized algos~~
 - [ ] Clean Repo, Add Images
 
 #### Bias Regularization
-- [ ] Baseline
-- [ ] Effect of upsampling
+- [X] ~~Baseline~~
+- [X] ~~Effect of upsampling~~
 - [ ] Effect of downsampling
-- [ ] Weighted classification
-- [X] Adversarial Validation
+- [X] ~~Weighted classification~~
+- [X] ~~Adversarial Validation~~
 
 #### Corpus Cleaning and Pre-Embedding EDA
-- [ ] Remove corpus specific stop words
-- [ ] Class based Interdependence
+- [X] ~~Remove corpus specific stop words~~
+- [X] ~~Class based Interdependence~~
 - [ ] Lemmatization
-- [ ] Handling NaN values
+- [X] ~~Handling NaN values~~
 
 #### Fine Tuning
-- [ ] t-SNE perplexity vals
-- [ ] BOW, TFIDF (min, max df)
-- [ ] LDA vecs (after pre embedding cleaning) - test baseline as well
-- [ ] Word2Vec(with/without shuffle, avg vs tfidf) (pre trained and custom)
-- [ ] GloVe (window, epochs, etc) (pre trained and custom)
-- [ ] FastText (pre trained and custom)
+- [X] ~~t-SNE perplexity vals~~
+- [X] ~~BOW, TFIDF (min, max df)~~
+- [X] ~~LDA vecs (after pre embedding cleaning) - test baseline as well~~
+- [X] ~~Word2Vec(with/without shuffle, avg vs tfidf) (pre trained and custom)~~
+- [X] ~~GloVe (window, epochs, etc) (pre trained and custom)~~
+- [X] ~~FastText (pre trained and custom)~~
 - [ ] Meta Feature Engineering
 
 #### Bugs
-- [ ] Bad hyperlink cleaning (httpsyoutbe)
-- [ ] Punctuations (!, etc)
-- [ ] Numbers
-- [X] Bad transliteration dict (Use Sets)
-- [X] Bad language tagging and translation (some Bangla got through)
-- [ ] Bad spelling corrections {couture (is already a word) instead of culture}
-- [ ] Handling NaN values created due to Bad Lexical Normalization
-- [ ] Fix DeEmojify (Hug emoji, Peace sign, etc)
+- [X] ~~Bad hyperlink cleaning (httpsyoutbe)~~
+- [X] ~~Punctuations (!, etc)~~
+- [X] ~~Numbers~~
+- [X] ~~Bad transliteration dict (Use Sets)~~
+- [X] ~~Bad language tagging and translation (some Bangla got through)~~
+- [X] ~~Bad spelling corrections {couture (is already a word) instead of culture}~~
+- [X] ~~Handling NaN values created due to Bad Lexical Normalization~~
+- [X] ~~Fix DeEmojify (Hug emoji, Peace sign, etc)~~

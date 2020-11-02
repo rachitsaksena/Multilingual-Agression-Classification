@@ -64,12 +64,11 @@ Given the 'NAG' bias, models, howsoever simple they may be in generalizing, are 
 
 ### Data Modelling
 We chose simple models like Logistic Regression, MultinomialNB, and SVC that wouldn't get overwhelmed by the imbalance and generalize easily. We also fine-tuned a BERT instance due to it's recorded State-of-the-Art performance with multilingual text classification tasks. The results of [various Machine Learning models](https://github.com/rachitsaksena/Multilingual-Agression-Classification/tree/master/Data%20Models) on the test set:
-|           Model           | English | Hindi | Bangla |
-|:-------------------------:|:-------:|:-----:|:------:|
-|    Logistic Regression    |         |       |        |
-|  Multinomial Naive Bayes  |         |       |        |
-| Support Vector Classifier |         |       |        |
-|             BERT          |         |       |        |
+| Language | Best Weighted F1-score |
+|:--------:|:----------------------:|
+|  English |          0.82          |
+|   Hindi  |          0.75          |
+|  Bangla  |          0.69          |
 
 The following table elaborates the implementation details of each model:
 |          Model          |                                               Dependencies                                              |
@@ -98,7 +97,7 @@ The following table elaborates the implementation details of each model:
 #### Tasks
 - [X] ~~Generating Word Embeddings for all sets~~
 - [X] ~~Lang generalized algos~~
-- [ ] Clean Repo, Add Images
+- [X] Clean Repo, Add Images
 
 #### Bias Regularization
 - [X] ~~Baseline~~

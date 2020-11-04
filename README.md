@@ -66,7 +66,7 @@ Given the 'NAG' bias, models, howsoever simple they may be in generalizing, are 
 We chose simple models like Logistic Regression, MultinomialNB, and SVC that wouldn't get overwhelmed by the imbalance and generalize easily. We also fine-tuned a BERT instance due to it's recorded State-of-the-Art performance with multilingual text classification tasks. The results of [various Machine Learning models](https://github.com/rachitsaksena/Multilingual-Agression-Classification/tree/master/Data%20Models) on the test set:
 | Language | Best Weighted F1-score |
 |:--------:|:----------------------:|
-|  English |          0.82          |
+|  English |          0.91          |
 |   Hindi  |          0.75          |
 |  Bangla  |          0.69          |
 
@@ -75,8 +75,6 @@ The following table elaborates the implementation details of each model:
 |:-----------------------:|:-------------------------------------------------------------------------------------------------------:|
 | LR, MultinomialNB, SVC  | Self (SciKit Learn for comparison and post-processing utils), NLTK, iNLTK, IndicNLP, CoreNLP and Gensim |
 | Tranformer Based Models |                                     Tensorflow, Tensorflow's BERT Base                                  |
-
-**... was chosen finally because of ...**
 
 ### Future Work
  * Reliable lemmatization for Hindi and Bangla
